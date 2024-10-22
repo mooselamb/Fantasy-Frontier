@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Arima", sans-serif;
+}
+
+.nav__wrapper {
+    position: relative;
+}
+
+.nav__container {
+    position: relative;
+    width: 200px; 
+    margin: 0 auto;
+}
+
+.nav__dragon--container {
+    position: relative;
+    width: 100%;
+}
+
+.nav__dragon--img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50% / 70%;
+    mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+    mask-size: cover;
+}
+
+.nav__candle--img {
+    position: absolute;
+    width: 20px; 
+    height: auto;
+}
+
+.left-candle {
+    left: -20px; 
+    bottom: -1px; 
+    animation: float-up 3s ease-in-out infinite;
+}
+
+.right-candle {
+    right: -20px; 
+    top: -1px; 
+    animation: float-down 3s ease-in-out infinite;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float-down {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
