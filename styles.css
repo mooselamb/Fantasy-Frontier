@@ -137,7 +137,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 200px);
+  max-height: calc(100vh - 50px);
   text-align: center;
   padding: 50px 20px;
 }
@@ -231,6 +231,7 @@ header {
 .books__wrapper {
     margin-top: 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
 }
@@ -363,4 +364,169 @@ footer {
     color: #c0a9e5;
     font-size: 24px;
     margin: 0 10px;
+}
+
+/* MEDIA QUERIES */
+
+/* Medium devices (tablets, 992px and below) */
+@media screen and (max-width: 992px) {
+  /* Adjust font sizes */
+  .nav__link {
+    font-size: 18px;
+    padding: 6px 12px;
+  }
+
+  .header__description h1 {
+    font-size: 2.5em;
+  }
+
+  .header__description h2 {
+    font-size: 1.2em;
+  }
+}
+
+/* Small devices (landscape phones, 768px and below) */
+@media screen and (max-width: 768px) {
+  /* Adjust navigation links */
+  .nav__links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav__link {
+    margin: 5px 0;
+    font-size: 18px;
+    padding: 6px 12px;
+  }
+
+  /* Adjust header */
+  .header__description h1 {
+    font-size: 2em;
+  }
+
+  .header__description h2 {
+    font-size: 1em;
+  }
+
+  /* Adjust images */
+  .highlight__img,
+  .book__img,
+  .explore__img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+
+  /* Adjust wrappers to stack vertically */
+  .highlight__wrapper,
+  .books__wrapper,
+  .books__wrapper-latest,
+  .explore__wrapper {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  /* Adjust cards */
+  .book__card,
+  .explore__card {
+    max-width: 100%;
+    margin: 10px auto;
+  }
+
+  /* Adjust candles */
+  .nav__candle--img {
+    width: 20px;
+  }
+
+  .left-candle {
+    left: 50px;
+    bottom: 50px;
+  }
+
+  .left-candle--second {
+    left: 100px;
+    bottom: 100px;
+  }
+
+  .right-candle {
+    right: 50px;
+    top: 50px;
+  }
+
+  .right-candle--second {
+    right: 150px;
+    top: 75px;
+  }
+
+  /* Adjust question dragon image */
+  .question--dragon {
+    width: 50%;
+  }
+
+  /* Adjust footer */
+  footer {
+    padding: 10px 0;
+  }
+}
+
+/* Extra small devices (phones, 576px and below) */
+@media screen and (max-width: 576px) {
+  /* Further adjust font sizes */
+  .nav__link {
+    font-size: 16px;
+    padding: 4px 8px;
+  }
+
+  .header__description h1 {
+    font-size: 1.5em;
+  }
+
+  .header__description h2 {
+    font-size: 0.9em;
+  }
+
+  /* Hide candles */
+  .nav__candle--img {
+    display: none;
+  }
+
+  /* Adjust header padding */
+  header {
+    padding: 30px 10px;
+    min-height: calc(100vh - 150px);
+  }
+
+  /* Adjust images */
+  .highlight__img,
+  .book__img,
+  .explore__img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+
+  /* Adjust paragraphs */
+  .highlight__para,
+  .explore__para {
+    font-size: 12px;
+    max-width: 100%;
+  }
+
+  /* Adjust cards */
+  .book__card,
+  .explore__card {
+    padding: 15px;
+    max-width: 100%;
+    margin: 10px auto;
+  }
+
+  /* Adjust question dragon image */
+  .question--dragon {
+    width: 70%;
+  }
+
+  /* Adjust footer */
+  footer {
+    padding: 10px 0;
+  }
 }
